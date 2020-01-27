@@ -269,7 +269,7 @@ func (t *tester) registerStdTest(pkg string) {
 	if t.runRx == nil || t.runRx.MatchString(testName) == t.runRxWant {
 		stdMatches = append(stdMatches, pkg)
 	}
-	timeoutSec := 180
+	timeoutSec := 1440
 	if pkg == "cmd/go" {
 		timeoutSec *= 2
 	}
