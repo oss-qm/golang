@@ -11,6 +11,17 @@ export GOCACHE := off
 # We need DEB_HOST_ARCH, so include the needed makefile snippet
 include /usr/share/dpkg/architecture.mk
 
+## we need to convert DEB_TARGET_ARCH names into Go's names
+ifeq ($(DEB_TARGET_ARCH),i386)
+export GOARCH := 386
+else
+  ifeq ($(DEB_TARGET_ARCH),i686)
+export GOARCH := 386
+  else
+export GOARCH := $(DEB_TARGET_ARCH)
+  endif
+endif
+
 RUN_TESTS := true
 # armel: ???
 # ppc64: ???
