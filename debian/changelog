@@ -1,3 +1,12 @@
+golang-1.10 (1.10.7-2~stretch1) unstable; urgency=medium
+
+  * add gitignore's
+  * debhelper 10 compatibility (backport to stretch)
+  * set GOARCH according to DEB_TARGET_ARCH
+  * increase test timeouts
+
+ -- Enrico Weigelt, metux IT consult <info@metux.net>  Mon, 27 Jan 2020 17:36:01 +0100
+
 golang-1.10 (1.10.7-2) unstable; urgency=medium
 
   [ Dr. Tobias Quathamer ]
